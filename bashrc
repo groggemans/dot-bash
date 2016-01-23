@@ -11,6 +11,11 @@ if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
 
+# set PATH so it includes user's private hidden bin if it exists
+if [ -d "$HOME/.bin" ] ; then
+    PATH="$HOME/.bin:$PATH"
+fi
+
 # set PATH so it includes the ellipsis bin if it exists
 if [ -d "$HOME/.ellipsis/bin" ] ; then
     PATH="$PATH:$HOME/.ellipsis/bin"
