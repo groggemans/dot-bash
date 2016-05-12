@@ -17,7 +17,7 @@ pkg.install() {
 # Link package
 pkg.link() {
     # Link files
-    fs.link_file bash_bashrc
+    fs.link_file bashrc
     fs.link_file profile
     fs.link_file bash_profile
     fs.link_file bash_logout
