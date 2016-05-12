@@ -7,4 +7,37 @@
 # @license MIT
 ##############################################################################
 
+# Install package
+pkg.install() {
+    : #TODO
+}
+
+##############################################################################
+
+# Link package
+pkg.link() {
+    # Link files
+    fs.link_file bash_bashrc
+    fs.link_file profile
+    fs.link_file bash_profile
+    fs.link_file bash_logout
+
+    # Link package into ~/.config/bash
+    fs.link_file "$PKG_PATH" "$HOME/.config/bash"
+}
+
+##############################################################################
+
+# Unlink package
+pkg.unlink() {
+    : #TODO
+}
+
+##############################################################################
+
+# Uninstall package
+pkg.uninstall() {
+    : #TODO
+}
+
 ##############################################################################

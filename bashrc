@@ -11,41 +11,34 @@ if [ ! -d "$HOME/.config/shell" ]; then
     exit
 fi
 
+# Helper functions
 source ~/.config/shell/helpers.sh
-source ~/.config/shell/exports.sh
-source ~/.config/shell/tmux.sh
-source ~/.config/shell/checks.sh
-source ~/.config/shell/colors.sh
 
+# Exports
+source ~/.config/shell/exports.sh
+
+# Tmux stuff
+source ~/.config/shell/tmux.sh
+
+# Some useful checks
+source ~/.config/shell/checks.sh
+
+# Colors
+source ~/.config/shell/color.sh
+
+# Bash settings
+source ~/.config/bash/setopt.bash
+
+# Prompt
+source ~/.config/shell/prompt.sh
+
+# Aliases
 source ~/.config/shell/aliases.sh
+
+# Useful functions
 source ~/.config/shell/functions.sh
 
 ##############################################################################
-
-# If not running interactively, don't do anything
-case $- in
-    *i*) ;;
-      *) return;;
-esac
-
-# don't put duplicate lines or lines starting with space in the history.
-# See bash(1) for more options
-HISTCONTROL=ignoreboth
-
-# append to the history file, don't overwrite it
-shopt -s histappend
-
-# for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-HISTSIZE=1000
-HISTFILESIZE=2000
-
-# check the window size after each command and, if necessary,
-# update the values of LINES and COLUMNS.
-shopt -s checkwinsize
-
-# If set, the pattern "**" used in a pathname expansion context will
-# match all files and zero or more directories and subdirectories.
-#shopt -s globstar
 
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
