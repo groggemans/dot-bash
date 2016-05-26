@@ -23,14 +23,15 @@ pkg.link() {
     fs.link_file bash_logout
 
     # Link package into ~/.config/bash
-    fs.link_file "$PKG_PATH" "$HOME/.config/bash"
+    mkdir -p "$ELLIPSIS_HOME/.config"
+    fs.link_file "$PKG_PATH" "$ELLIPSIS_HOME/.config/bash"
 }
 
 ##############################################################################
 
 # Unlink package
 pkg.unlink() {
-    : #TODO
+    rm "$ELLIPSIS_HOME/.config/bash"
 }
 
 ##############################################################################
