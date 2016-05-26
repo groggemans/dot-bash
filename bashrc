@@ -6,37 +6,39 @@
 # @license MIT
 ##############################################################################
 
+SHELL_LIB="$HOME/.config/shell/lib"
+
 if [ ! -d "$HOME/.config/shell" ]; then
     echo "Could not find commen files"
     exit
 fi
 
 # Helper functions
-source ~/.config/shell/helpers.sh
+source "$SHELL_LIB/helpers.sh"
 
 # Exports
-source ~/.config/shell/exports.sh
+source "$SHELL_LIB/exports.sh"
 
 # Tmux stuff
-source ~/.config/shell/tmux.sh
+source "$SHELL_LIB/tmux.sh"
 
 # Some useful checks
-source ~/.config/shell/checks.sh
+source "$SHELL_LIB/checks.sh"
 
 # Colors
-source ~/.config/shell/color.sh
+source "$SHELL_LIB/color.sh"
 
 # Bash settings
 source ~/.config/bash/setopt.bash
 
 # Prompt
-source ~/.config/shell/prompt.sh
+source "$SHELL_LIB/prompt.sh"
 
 # Aliases
-source ~/.config/shell/aliases.sh
+source "$SHELL_LIB/aliases.sh"
 
 # Useful functions
-source ~/.config/shell/functions.sh
+source "$SHELL_LIB/functions.sh"
 
 ##############################################################################
 
