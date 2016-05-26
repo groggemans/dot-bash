@@ -31,7 +31,11 @@ pkg.link() {
 
 # Unlink package
 pkg.unlink() {
+    # Remove config dir
     rm "$ELLIPSIS_HOME/.config/bash"
+
+    # Remove all links in the home folder
+    hooks.unlink
 }
 
 ##############################################################################
