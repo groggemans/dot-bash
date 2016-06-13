@@ -77,8 +77,8 @@ fi
 ##############################################################################
 # Secret config
 
-if [ -f ~/.secret/zsh/zshrc ]; then
-    source ~/.secret/zsh/zshrc
+if [ -f ~/.secret/bash/bashrc ]; then
+    source ~/.secret/bash/bashrc
 fi
 
 ##############################################################################
@@ -95,8 +95,8 @@ fi
 ##############################################################################
 # Local config
 
-if [ -f ~/.local/zsh/zshrc ]; then
-    source ~/.local/zsh/zshrc
+if [ -f ~/.local/bash/bashrc ]; then
+    source ~/.local/bash/bashrc
 fi
 
 ##############################################################################
