@@ -9,7 +9,7 @@ Feel free to use it as a starting point for your own bash configuration!
 **Requirements:** [Ellipsis][ellipsis], [dot-shell][dot-shell]
 
 ``` shell
-$ ellipsis install groggemasn/dot-shell
+$ ellipsis install groggemans/dot-shell
 $ ellipsis install groggemans/dot-bash
 ```
 
