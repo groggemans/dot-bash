@@ -11,8 +11,11 @@ recommended to use Ellipsis for installation, although manual installation is
 also supported.
 
 #### Ellipsis
+**Requirements:** [dot-shell][dot-shell]
+
 ``` shell
-    ellipsis install groggemans/dot-bash
+$ ellipsis install groggemasn/dot-shell
+$ ellipsis install groggemans/dot-bash
 ```
 
 #### Manual
@@ -32,3 +35,5 @@ MIT
 
 [Ellipsis]:             https://github.com/ellipsis/ellipsis
 [groggemans]:           https://github.com/groggemans
+
+[dot-shell]:            https://github.com/groggemans/dot-shell
