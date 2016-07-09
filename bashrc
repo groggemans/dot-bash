@@ -82,17 +82,6 @@ if [ -f ~/.secret/bash/bashrc ]; then
 fi
 
 ##############################################################################
-# Other config
-
-if [ -d ~/.config/shell/source ]; then
-    shopt -s dotglob nullglob
-    for file in ~/.config/shell/source/*; do
-        source "$file"
-    done
-    shopt -u dotglob nullglob
-fi
-
-##############################################################################
 # Local config
 
 if [ -f ~/.local/bash/bashrc ]; then
