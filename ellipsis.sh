@@ -1,4 +1,3 @@
-#!/usr/bin/env bash
 ##############################################################################
 # @file ellipsis.sh
 # @date January, 2016
@@ -7,14 +6,24 @@
 # @license MIT
 ##############################################################################
 
-# Install package
+# Minimal ellipsis version
+ELLIPSIS_VERSION_DEP='1.9.0'
+
+# Package dependencies (informational/not used!)
+ELLIPSIS_PKG_DEPS='groggemans/dot-shell'
+
+##############################################################################
+
 pkg.install() {
-    : #No action
+    # groggemans/shell package should be installed (rough check)
+    if ! ellipsis.list_packages | grep "$ELLIPSIS_PACKAGES/shell"; then
+        log.fail "Unmet dependency 'groggemans/dot-shell'"
+        return 1
+    fi
 }
 
 ##############################################################################
 
-# Link package
 pkg.link() {
     # Link files
     fs.link_file bashrc
@@ -28,7 +37,6 @@ pkg.link() {
 
 ##############################################################################
 
-# Unlink package
 pkg.unlink() {
     # Remove config dir
     rm "$ELLIPSIS_HOME/.config/bash"
@@ -39,9 +47,8 @@ pkg.unlink() {
 
 ##############################################################################
 
-# Uninstall package
 pkg.uninstall() {
-    : #No action
+    : # No action
 }
 
 ##############################################################################
