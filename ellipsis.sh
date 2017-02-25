@@ -7,7 +7,7 @@
 ##############################################################################
 
 # Minimal ellipsis version
-ELLIPSIS_VERSION_DEP='1.9.0'
+ELLIPSIS_VERSION_DEP='1.9.4'
 
 # Package dependencies (informational/not used!)
 ELLIPSIS_PKG_DEPS='groggemans/dot-shell'
@@ -34,6 +34,17 @@ pkg.link() {
     # Link package into ~/.config/bash
     mkdir -p "$ELLIPSIS_HOME/.config"
     fs.link_file "$PKG_PATH" "$ELLIPSIS_HOME/.config/bash"
+}
+
+##############################################################################
+
+pkg.pull() {
+    # Use improved update strategy
+    if git.is_behind; then
+        pkg.unlink
+        git.pull
+        pkg.link
+    fi
 }
 
 ##############################################################################
