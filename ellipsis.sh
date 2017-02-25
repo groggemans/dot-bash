@@ -40,6 +40,7 @@ pkg.link() {
 
 pkg.pull() {
     # Use improved update strategy
+    git remote update 2>&1 > /dev/null
     if git.is_behind; then
         pkg.unlink
         git.pull
