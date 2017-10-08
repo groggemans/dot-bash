@@ -89,3 +89,10 @@ if [ -f ~/.local/bash/bashrc ]; then
 fi
 
 ##############################################################################
+# Completion
+
+if [ -f /usr/local/bin/terraform ]; then
+    complete -C /usr/local/bin/terraform terraform
+fi
+
+##############################################################################
