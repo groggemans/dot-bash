@@ -9,7 +9,7 @@
 SHELL_LIB="$HOME/.config/shell/lib"
 
 if [ ! -d "$HOME/.config/shell" ]; then
-    echo "Could not find commen files"
+    echo "Could not find common files"
     return
 fi
 
